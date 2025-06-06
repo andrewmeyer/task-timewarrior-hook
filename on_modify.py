@@ -59,6 +59,9 @@ def extract_tags_from(json_obj):
         else:
             tags.extend(json_obj['tags'])
 
+    if 'ticket' in json_obj:
+        tags.append(json_obj['ticket'])
+
     return tags
 
 
